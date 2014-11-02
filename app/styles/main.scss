@@ -1,92 +1,271 @@
-$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-// bower:scss
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
-// endbower
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400);
+
+// fc5843
+$brand_base: #66a8a1;
+
+
+$font-base-size: 18px;
+
+$font-family-sans-serif: 'Open Sans', serif;
+$font-family-serif: 'Merriweather', georgia serif;
+
+$font-family-base: $font-family-serif;
+
+$headings-font-weight: 700;
+$headings-font-family: $font-family-sans-serif;
+
+ 
+$btn-primary-bg: $brand_base;
+$panel-default-text: #fff;
+$panel-default-heading-bg: $brand_base;
+$navbar-height: 125px;
+
+$navbar-default-brand-color: #fff;
+
+$navbar-default-bg: #f9f9f9;
+$navbar-default-link-color: $brand_base;
+$navbar-default-link-hover-color: darken($brand_base, 50%);
+$navbar-default-link-active-bg: transparent;
+$brand-primary: $brand_base;
+$navbar-link-color: #333;
+
+
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap";
+@import "components-font-awesome/scss/font-awesome";
+
+@mixin fade($attribute, $duration) {
+  -moz-transition: $attribute $duration;
+  -webkit-transition: $attribute $duration;
+  transition: $attribute $duration;
 }
 
-/* Space out content a bit */
+@mixin opacity-fade($duration) {
+  -moz-transition: opacity $duration;
+  -webkit-transition: opacity $duration;
+  transition: opacity $duration;
+}
+
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+    background: #fff;
+    &.home-template {
+        .navbar-default {
+            background-color: #f9f9f9;
+        }
+    }
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+pre {
+  background: #23241f;
 }
+.navbar {
+  border-bottom: 1px solid #f1f1f1;
+  .avatar {
+    margin-top: $navbar-height / 2 - 35;
+  }
+  li.active {
+    a {
+      border-bottom: 3px solid $brand-base;
+      padding-bottom: 5px;
+      padding-left: 5px;
+      padding-right: 5px;
+      margin-right: 20px;
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
+    }
+  }
+  h4 {
+    margin-top: 50px;
+    margin-left: 25px;
+    color: #000;
   }
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+.avatar {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
+article {
+  &.post {
+    float: left;
+    display: block;
   }
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
+.post-title {
+  a {
+    color: #555;
+    text-decoration: none;
+    @include fade(color, 0.3s);
+    &:hover {
+      color: #000;
+    }
   }
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
+.timeline {
+  background: #e1e1e1;
+  width: 5px;
+  height: 1000%;
+  clear: both;
+  position: absolute;
+  left: 55%;
+  z-index: 1;
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    left: 70%;
   }
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
+}
+
+.post {
+  .post-header {
+    margin-top: 50px;
+  }
+  .post-title {
+    font-size: 38px;
+  }
+  .post-meta {
+    color: #999;
+    margin-bottom: 50px;
+  }
+  .post-footer {
+    margin-top: 100px;
+    padding-top: 50px;
+    border-top: 1px solid #f1f1f1;
+    h2 {
+      font-size: 38px;
+      margin-top: -25px;
+      margin-bottom: 25px;
+    }
+  }
+  p {
+    font-size: 18px;
+    line-height: 31.5px;
+    color: rgba(58, 65, 69, 1);
+    margin-bottom: 20px;
+  }
+  h3, h4, h5, h6 {
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+.home-template {
+  .post {
+    margin-bottom: 50px;
+    .meta {
+    }
+    .post-title {
+      font-size: 38px;
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        font-size: 24px;
+        margin-left: 25px;
+      }
+      @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        font-size: 32px;
+        margin-top: 14px;
+      }
+
+    }
+    time {
+      padding-top: 35px;
+      display: inline-block;
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        padding-top: 25px;
+      }
+      @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        padding-top: 25px;
+        padding-left: 0;
+      }
+    }
+
+    .content {
+      margin-top: -20px;
+      clear: both;
+      p.empty {
+        background: #ccc;
+        width: 100%;
+        height: 100px;
+      }
+      img.instagram {
+        width: 60%;
+        margin-top: 25px;
+        margin-left: -10px;
+        position: relative;
+        z-index: 999;
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+          width: 80%;
+          margin-left: 190px;
+        }
+        @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+          width: 80%;
+        }
+
+      }
+    }
+
+  }
+}
+
+.color-block {
+  background: hsla(random(360), 55, 90, 1);
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin: 25px;
+}
+
+.pagination {
+  clear: both;
+  width: 100%;
+}
+
+
+.post-type {
+  margin: 0 auto;
+  font-size: 32px;
+  background: #ccc;
+  border-radius: 80px;
+  width: 80px;
+  height: 80px;
+  z-index: 9999;
+  position: relative;
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    font-size: 24px;
+    background: #ccc;
+    border-radius: 60px;
+    width: 60px;
+    height: 60px;
   }
 
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    font-size: 24px;
+    background: #ccc;
+    border-radius: 60px;
+    width: 60px;
+    height: 60px; 
   }
 
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+
+
+  i {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    color: #fff;
+  }
+  &.instagram {
+    background: #1abc9c;
+  }
+  &.twitter {
+    background: #55acee;
+  }
+  &.bookmark {
+    background: #2ecc71;
   }
 }
