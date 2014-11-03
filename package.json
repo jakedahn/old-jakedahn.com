@@ -1,6 +1,7 @@
 {
   "name": "jakedahn-com",
   "devDependencies": {
+    "gifsicle": "1.0.1",
     "apache-server-configs": "^2.7.1",
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^1.0.0",
