@@ -9,7 +9,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -28,8 +28,41 @@
             <div class='pull-left'>
               <img class='avatar' src="http://www.gravatar.com/avatar/eb9f58086e20c6a51c78b43e1f683e6e?s=70" />
             </div>
-            <div class='pull-left'>
-              <h4>jakelog</h4>
+
+              <ul class='social pull-left'>
+                <li><a href='http://github.com/jakedahn'>
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-2x"></i>
+                  </span>
+                </a></li>
+                <li><a href='http://twitter.com/jakedahn'>
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a></li>
+                <li><a href='https://www.linkedin.com/in/jakedahn'>
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a></li>
+                <li><a href='http://instagram.com/jakedahn'>
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a></li>
+                <li><a href='http://last.fm/user/jakedahn'>
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-lastfm fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a></li>
+              </ul>
+
+            <div class='pull-left hidden'>
+              <h1>Jake Dahn</h1>
             </div>
           </a>
         </div>
@@ -42,12 +75,86 @@
       </div>
     </div>
 
-    <div clas=s'container'>
-      content goes here
+    <div class='container'>
+      <div class='row'>
+        <div class='col-md-8 post'>
+          <p>Hello, my name is Jake Dahn and I'm a child of the internet.</p>
+
+          <p>I currently live in San Francisco with my wife <a href="http://jessicagillis.com">Jessica</a>, our cat <a href="http://jakedahn.com/missy.gif">Missy</a>, and our car <a href="http://instagram.com/p/ddI5FSNVFL">George</a>. I have a passion for building silly side-projects, exploring the space, the internet, and the earth.</p>
+
+          <p>I started my career as a designer but quickly fell in love with programming. I was part of the founding team of <a href="http://openstack.com">OpenStack</a>, and part of the <a href="http://en.wikipedia.org/wiki/Nebula_(computing_platform)">NASA Nebula</a> team.</p>
+
+          <p>I work at <a href="http://planet.com">Planet Labs</a> with a truly amazing group of people. I helped build the infrastructure required to process imagery from the largest fleet of earth imaging satellites ever operated, and now I'm working on building products on top of that infrastructure.</p>
+
+          <p>If you want to work with me and other amazing people <a class='btn btn-primary' href='https://www.planet.com/careers/'><i class='fa fa-rocket'></i> please apply here</a></p>
+        </div>
+
+      </div>
+
+
+      <div class='row'>
+        <div class='col-md-12'>
+          <h2>My Projects</h2>
+          <div class='row'>
+
+            <div class='project col-md-4'>
+              <h3>Mustache.me</h3>
+              <p>Mustache.me was the first small hack-project that I made using ruby (sinatra). Over the years I've tried to improve it slowly - usually around movember.</p>
+              <a class='btn btn-primary' href='http://mustache.me'>visit mustache.me</a>
+            </div>
+
+            <div class='project col-md-4'>
+              <h3>More Interestingness</h3>
+              <p>Chrome extension that fills your new-tab screen with a beautiful photo from <a href='https://www.flickr.com/explore/'>Flickr's Interestingness API</a>.</p>
+              <a class='btn btn-primary' href='https://chrome.google.com/webstore/detail/more-interestingness/ngddmdmkjnnefgggjnnnepijkcighifa?hl=en'>visit chrome web store</a>
+            </div>
+
+            <div class='project col-md-4'>
+              <h3>Good Fucking Dating Advice</h3>
+              <p>NSFW project that I did with <a href='https://twitter.com/johnheimkes'>a friend</a> years ago when we were still in school. We had a good laugh building it.</p>
+              <a class='btn btn-primary' href='http://mustache.me'>visit GFDA</a>
+            </div>
+          </div>
+
+          <div class='row'>
+            <div class='project col-md-4'>
+              <h3>stsh.me</h3>
+              <p>A mac application that uploads your screenshots and copies the url to your clipboard. Also a pretty badass url shortener.</p>
+              <a class='btn btn-primary' href='http://stsh.me'>visit stsh.me</a>
+            </div>
+
+            <div class='project col-md-4'>
+              <h3>CollectUX</h3>
+              <p>A project I built with <a href='http://jessicagillis.me'>my wife</a> that lets mobile designers collect, curate, and research beautiful ux workflows.</p>
+              <a class='btn btn-primary' href='http://collectux.com'>visit CollectUX</a>
+            </div>
+
+            <div class='project col-md-4'>
+              <h3>Oblique</h3>
+              <p>Oblique Strategies have always been an inspiration to me. One day I decided to build out an API / website to display random oblique strategies.</p>
+              <a class='btn btn-primary' href='http://oblique.jakedahn.com'>visit oblique</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
